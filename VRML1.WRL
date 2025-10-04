@@ -1,0 +1,57 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+Viewpoint {
+	orientation	-0.659778 0.571581 -0.487841  0.0876042
+	position	0 0 6
+}
+DEF Sun Transform {
+	translation	0 0 0
+	rotation	0.683174 0.0101096 0.730186  3.12268
+	scale	1 1 0.999999
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				ambientIntensity	0.1
+				diffuseColor	0.9 0.79975 0.300312
+			}
+
+			textureTransform	NULL
+			texture	ImageTexture {
+				url	"texture/Fire_4.gif"
+			}
+
+		}
+
+		geometry	Sphere {
+			radius	0.310031
+		}
+
+	}
+}
+DEF Comet Transform {
+	translation	0.3255 -0.595 0.1662
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+			texture	DEF Nebula ImageTexture {
+				url	"texture/Nebula.jpg"
+			}
+
+		}
+
+		geometry	Sphere {
+			radius	0.1
+		}
+
+	}
+}
+DEF AniGroup-6-TIMER TimeSensor {
+	cycleInterval	1
+}

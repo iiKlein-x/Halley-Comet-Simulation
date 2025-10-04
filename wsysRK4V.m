@@ -1,0 +1,17 @@
+function [Y,t]=wsysRK4V(FV,Y0,a,b,N)
+h=(b-a)/N;
+Y = zeros(N,6);
+Y(1,:)=Y0;t(1)=a;
+for i=1:N
+    t(i+1)=a+i*h;
+    
+    K1=feval(FV,t(i),Y(i,:));
+    K2=feval(FV,t(i)+h/2,Y(i,:)+(h/2).*K1');
+    K3=feval(FV,t(i)+h/2,Y(i,:)+(h/2).*K2');
+    K4=feval(FV,t(i)+h,Y(i,:)+h.*K3');
+    Y(i+1,:)=Y(i,:)+(h/6)*(K1+2*K2+2*K3+K4)';
+   
+    
+    %disp([K1' K2' K3' K4' Y(i+1,:)])
+    %pause
+ end
