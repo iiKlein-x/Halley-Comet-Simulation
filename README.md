@@ -17,7 +17,7 @@ d²r/dt² = -μ r / |r|³
 where μ = 4π² (AU³/year²).
 ## Numerical Method
 The second-order differential equations are transformed into a first-order system and solved using the RK4 method for stability and accuracy.
-# How to Run
+## How to Run
 run halley.mlapp
 
 
